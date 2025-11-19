@@ -1,3 +1,7 @@
+#include <stdbool.h>
+#include <stdint.h>
+
+
 typedef struct {
     int *data;
     int newest_index;
@@ -85,4 +89,12 @@ int myCircularQueueRear(MyCircularQueue* obj) {
 
 void myCircularQueueFree(MyCircularQueue* obj) {
     free(obj);
+}
+
+
+int main()
+{
+    //TODO: add test code
+
+    return 0;
 }
