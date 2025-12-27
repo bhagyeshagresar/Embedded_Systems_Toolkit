@@ -17,7 +17,10 @@ class myQueue
             size = 0;
         }
 
-
+        int get_size()
+        {
+            return size;
+        }
         //if size is zero that means the queue is empty Time complexity O(1)
         bool isEmpty()
         {
@@ -56,7 +59,7 @@ class myQueue
             {
                 arr[i-1] = arr[i];
             }
-            size--;
+            size--; //consider scenarios when size = 1 i.e. size pointing to the second element in the array
 
 
         }
@@ -98,11 +101,18 @@ int main()
     q.enQueue(20);
     q.enQueue(30);
     q.enQueue(40);
+    std::cout << "Size of queue: " << q.get_size() << std::endl;
     std::cout << "Front: " << q.front() << std::endl;
     q.deQueue();
-    std::cout << "Front: " << q.front() << std::endl;
-    std::cout << "Rear: " << q.rear() << std::endl;
-  
+      std::cout << "Front: " << q.front() << std::endl;
+    q.deQueue();
+      std::cout << "Front: " << q.front() << std::endl;
+     q.deQueue();
+       std::cout << "Front: " << q.front() << std::endl;
+      q.deQueue();
+   std::cout << "Front: " << q.front() << std::endl;
+    std::cout << "rear: " << q.rear() << std::endl;
+     std::cout << "Size of queue: " << q.get_size() << std::endl;
 
 
 
