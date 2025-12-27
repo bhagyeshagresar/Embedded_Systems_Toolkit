@@ -3,3 +3,4 @@
 1) Custom implementation of Malloc, Calloc, Realloc and Free
 2) Circular Queue Implementation
 3) Queue using Array
+4) Switch Debouncing in software
