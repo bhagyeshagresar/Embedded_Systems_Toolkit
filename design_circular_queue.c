@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+//Time Complexity of all the functions is O(1)
 
 //Leaving one extra space to avoid the edge case of when is it empty vs full
 typedef struct {
