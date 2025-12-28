@@ -77,6 +77,8 @@ int myCircularQueueFront(MyCircularQueue* obj) {
 int myCircularQueueRear(MyCircularQueue* obj) {
 
     //(obj->capacity + obj->newest_index - 1) <- this part will always be negative
+    //consider the case when the newest index has just wrapped around, the newest index can be zero and then newest_index - 1 will 
+    //yield a negative index adding capacity to newest_index - 1 prevents that.
 
     /*
         Without modulo:
