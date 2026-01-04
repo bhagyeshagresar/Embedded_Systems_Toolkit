@@ -114,7 +114,18 @@ int main() {
     }
 
     // 5. FREE: When done, return the pointer
-    
+    /*
+
+        Current State (Both blocks are out): free_list -> [Block C] -> [Block D] ...
+        free(raw_ptr): raw_ptr (Block A) becomes the new head. It points to Block C.
+
+        free(str_ptr): str_ptr (Block B) becomes the new head. It points to Block A.
+
+        Resulting Chain: free_list -> Block B -> Block A -> Block C
+            
+    */
+    mem_pool_free(&my_pool, raw_ptr);
+    mem_pool_free(&my_pool, str_ptr);
 
     return 0;
 }
